@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title_bar %}
+<div class="title-bar">
+            <h1>New Question</h1>
+        </div>
+{% endblock %}
+{% block content %}
+<div class="ask_menu">
+    <table class="table">
+        <tr>
+            <td>Title</td>
+            <td><input class="input1" type="text"></td>
+        </tr>
+        <tr>
+            <td>Text</td>
+            <td><input class="input2" type="text"></td>
+        </tr>
+        <tr>
+            <td>Tags</td>
+            <td>
+                <div>
+                    <input class="input1" type="text">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button>ASK!</button></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

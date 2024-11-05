@@ -1,0 +1,14 @@
+{% load static %}
+{% block pagination %}
+<div class="pagination">
+    <button><a href="?page=1">FIRST</a></button>
+    {% if page_obj.has_previous %}
+        <button><a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a></button>
+    {% endif %}
+    <button class="active">{{ page_obj.number }}</button>
+    {% if page_obj.has_next %}
+        <button><a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></button>
+    {% endif %}
+        <button><a href="?page={{ page_obj.paginator.num_pages }}">LAST</a></button>
+</div>
+{% endblock %}

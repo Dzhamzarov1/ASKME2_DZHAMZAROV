@@ -1,0 +1,43 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title_bar %}
+<div class="title-bar">
+</div>
+{% endblock %}
+{% block content %}
+<div class="cards">
+    <article class="quest-bar">
+        <div class="card-left">
+            <img src="{% static 'img/duck1.jpg' %}" alt="Image" class="quest-image">
+            <input type="number" class="quest-likes" value="5">
+        </div>
+
+        <div class="quest-right">
+            <div class="quest-right-content">
+                <h4 class="quest-title"><a href="#">{{ item.title }}</a></h4>
+
+                <div class="quest-text">{{ item.text }}</div>
+            </div>
+
+            <div class="quest-right-bottom">
+                <div class="quest-tags">
+                    tags:
+                    {% for tag in item.tags %}
+                        <a href="{% url 'tags' tag.id %}">{{ tag.text }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    {% for question in requestions %}
+        {% include 'layouts/request.html' %}
+    {% endfor %}
+    {% include 'layouts/pagination.html' %}
+    <div class="answer_field">
+        <input class="answer_text" type="text">
+        <button class="answer-button">Answer</button>
+    </div>
+
+</div>
+{% endblock %}

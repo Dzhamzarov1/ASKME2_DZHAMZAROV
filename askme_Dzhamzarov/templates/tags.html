@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title_bar %}
+        <div class="title-bar">
+            <h1>Tag:</h1>
+            <a class="tag">{{ tag_id }}</a>
+        </div>
+{% endblock %}
+{% block content %}
+<div class="cards">
+    {% if questions %}
+    {% for question in questions %}
+        {% include 'layouts/question.html' %}
+    {% endfor %}
+    {% include 'layouts/pagination.html' %}
+    {% else %}
+    <h1>По этому тегу нету результатов.</h1>
+    {% endif %}
+</div>
+{% endblock %}

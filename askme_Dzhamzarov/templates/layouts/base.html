@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{% url 'index' %}">AskPupkin</a>
+        </div>
+        <div class="search-form">
+            <form action="{% url 'ask' %}">
+                <input class="search-form-input" type="text">
+                <button class="search-form-button">Ask!</button>
+            </form>
+        </div>
+        <div class="account">
+            <div class="account-image">
+                <img src="./image.jpg" alt="Image">
+            </div>
+            <div class="account-content">
+                <div class="account-name">Dr. Pepper</div>
+                <div class="account-actions">
+                    <a href="{% url 'settings' %}">settings</a>
+                    <a href="{% url 'login' %}">Log out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        {% block title_bar %}
+        {% endblock %}
+        <div class="content">
+        {% block content %}
+        {% endblock %}
+            <aside class="sidebar">
+                <section class="popular-tags">
+                    <h3>Popular Tags</h3>
+                    <div class="tags">
+                        <a href="{% url 'tags' 'tag0' %}">Tag0</a>
+                        <a href="{% url 'tags' 'tag1' %}">Tag1</a>
+                        <a href="{% url 'tags' 'tag2' %}">Tag2</a>
+                        <a href="{% url 'tags' 'tag3' %}">Tag3</a>
+                        <a href="{% url 'tags' 'tag4' %}">Tag4</a>
+                        <a href="{% url 'tags' 'tag5' %}">Tag5</a>
+                        <a href="{% url 'tags' 'tag6' %}">Tag6</a>
+                        <a href="{% url 'tags' 'tag7' %}">Tag7</a>
+                        <a href="{% url 'tags' 'tag8' %}">Tag8</a>
+                        <a href="{% url 'tags' 'tag9' %}">Tag9</a>
+                        <a href="{% url 'tags' 'tag10' %}">Tag10</a>
+                        <a href="{% url 'tags' 'NotResultTag' %}">NotResultTag</a>
+                    </div>
+                </section>
+                <section class="best-members">
+                    <h3>Best Members</h3>
+                    <ul class="best-members-list">
+                        <li><a href="#">Member</a></li>
+                        <li><a href="#">Member</a></li>
+                        <li><a href="#">Member</a></li>
+                        <li><a href="#">Member</a></li>
+                        <li><a href="#">Member</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

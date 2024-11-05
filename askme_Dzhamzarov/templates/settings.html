@@ -1,0 +1,39 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title_bar %}
+<div class="title-bar">
+    <h1>Settings: Dr. Pepper</h1>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="settings_menu">
+    <table class="table">
+        <tr class="row">
+            <td  class="cell">Login</td>
+            <td class="cell"><input type="text"></td>
+        </tr>
+        <tr class="row">
+            <td class="cell">Email</td>
+            <td class="cell"><input type="email"></td>
+        </tr>
+        <tr class="row">
+            <td class="cell">NickName</td>
+            <td class="cell"><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Upload avatar</td>
+            <td>
+                <div class="avatar_show">
+                <img alt="image" class="img">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="file"></td>
+        </tr>
+    </table>
+
+</div>
+{% endblock %}

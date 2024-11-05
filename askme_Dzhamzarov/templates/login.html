@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title_bar %}
+<div class="title-bar">
+    <h1>Log In</h1>
+</div>
+{% endblock %}
+{% block content %}
+<form class="login_menu" action="./index.html">
+    <table class="table">
+        <div class="warring">Sorry, wrong password!</div>
+        <tr>
+            <td>Login</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button>Log in!</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="{% url 'signup' %}">create new account</a></td>
+        </tr>
+
+
+    </table>
+
+</form>
+{% endblock %}

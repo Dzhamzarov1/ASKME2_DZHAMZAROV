@@ -1,0 +1,18 @@
+{% load static %}
+<article class="request">
+                    <div class="request-left">
+                        <img src="{% static 'img/duck1.jpg' %}" alt="Image" class="card-image">
+                        <input type="number" class="request-likes" value="5">
+                    </div>
+
+                    <div class="request-right">
+                        <div class="request-right-content">
+
+                            <div class="request-text">{{ question.text }}</div>
+                        </div>
+
+                        <div class="request-right-bottom">
+                            <input type="checkbox">Correct!
+                        </div>
+                    </div>
+                </article>

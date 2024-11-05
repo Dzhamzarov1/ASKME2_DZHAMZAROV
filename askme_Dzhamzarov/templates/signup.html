@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title_bar %}
+<div class="title-bar">
+    <h1>Registration</h1>
+</div>
+{% endblock %}
+{% block content %}
+<form class="login_menu" action="./index.html">
+    <table class="table">
+        <div class="warring">Sorry, this email address allready register!</div>
+        <tr class="row">
+            <td>Login</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr class="row">
+            <td>Email</td>
+            <td><input type="email"></td>
+        </tr>
+        <tr class="row">
+            <td>NickName</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr class="row">
+            <td>Password</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr class="row">
+            <td>Repeat password</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr class="row">
+            <td>Upload avatar</td>
+            <td><input type="file"></td>
+        </tr>
+        <tr class="row">
+            <td></td>
+            <td><button>Register!</button></td>
+        </tr>
+
+
+    </table>
+
+</form>
+{% endblock %}
